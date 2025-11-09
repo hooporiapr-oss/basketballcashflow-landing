@@ -27,6 +27,8 @@ linear-gradient(180deg, #0b0f14 0%, #0e1116 100%);
 }
 a{ color:inherit; text-decoration:none }
 .wrap{ max-width:1100px; margin:0 auto; padding:0 20px }
+
+/* Header */
 header{
 position:sticky; top:0; z-index:10;
 backdrop-filter: saturate(140%) blur(6px);
@@ -43,11 +45,14 @@ box-shadow:0 0 0 1px #0006 inset, 0 8px 20px rgba(0,0,0,.35);
 .title{ font-weight:800; letter-spacing:.2px }
 .badge{ font-size:12px; color:var(--muted) }
 
-.nav-cta a, .btn {
+.nav-cta a{
 display:inline-block; padding:10px 14px; border-radius:10px;
 background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:var(--ctaTxt); font-weight:800;
-border:1px solid #1b2c3f; cursor:pointer;
+border:1px solid #1b2c3f;
 }
+.nav-cta a:hover{ filter:brightness(1.05) }
+
+/* Hero */
 .hero{ padding:64px 0 36px }
 .h-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:28px }
 @media (max-width:900px){ .h-grid{ grid-template-columns:1fr } }
@@ -57,12 +62,14 @@ border:1px solid #1b2c3f; cursor:pointer;
 .cta{
 display:inline-block; padding:14px 18px; border-radius:12px; font-weight:900; letter-spacing:.2px;
 background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:var(--ctaTxt); border:none;
-box-shadow:0 8px 18px rgba(0,0,0,.25); cursor:pointer;
+box-shadow:0 8px 18px rgba(0,0,0,.25);
 }
 .cta.secondary{
 background:transparent; color:#d7e6ff; border:1px solid var(--btnBr); padding:13px 17px;
 }
 .meta{ margin-top:14px; font-size:12px; color:var(--muted) }
+
+/* Card image */
 .mock{
 background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px;
 min-height:240px; box-shadow:0 12px 32px rgba(0,0,0,.35);
@@ -75,6 +82,8 @@ min-height:240px; box-shadow:0 12px 32px rgba(0,0,0,.35);
 .kpis{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:12px }
 .kpi{ background:#0f1622; border:1px solid #1f2d42; padding:10px; border-radius:10px; text-align:center }
 .kpi b{ display:block; font-size:18px }
+
+/* Sections */
 section{ padding:30px 0 }
 .grid3{ display:grid; gap:16px; grid-template-columns:repeat(3,1fr) }
 @media (max-width:900px){ .grid3{ grid-template-columns:1fr } }
@@ -85,6 +94,7 @@ box-shadow:0 10px 26px rgba(0,0,0,.28);
 h2{ margin:0 0 12px 0; font-size:22px }
 h3{ margin:0 0 6px 0; font-size:16px }
 p{ margin:0; color:var(--muted); line-height:1.5 }
+
 .footer{
 border-top:1px solid var(--line); color:var(--muted); font-size:13px; padding:16px 0; margin-top:10px
 }
@@ -103,7 +113,7 @@ border-top:1px solid var(--line); color:var(--muted); font-size:13px; padding:16
 </div>
 </div>
 <div class="nav-cta">
-<a href="https://cash.heybori.co">Launch App</a>
+<a href="https://cash.heybori.co" aria-label="Launch App">Launch App</a>
 </div>
 </div>
 </header>
@@ -118,7 +128,7 @@ border-top:1px solid var(--line); color:var(--muted); font-size:13px; padding:16
 <a class="cta" href="https://cash.heybori.co">Launch App</a>
 <a class="cta secondary" href="#learn-more">Learn More</a>
 </div>
-<div class="meta">No installs • Works on mobile • Shareable summaries • Multi-coach friendly</div>
+<div class="meta">No installs • Works on mobile • CSV export • Multi-coach friendly</div>
 </div>
 
 <div class="mock" aria-label="Preview card">
@@ -132,64 +142,56 @@ border-top:1px solid var(--line); color:var(--muted); font-size:13px; padding:16
 </div>
 </section>
 
-<section class="card" style="margin-top:20px;">
-<h2>Export (CSV)</h2>
-<button id="downloadCsv" class="btn">Download CSV</button>
+<section id="learn-more">
+<div class="grid3">
+<div class="card">
+<h3>Built for Coaches</h3>
+<p>Fast entry, clear categories, and program-level privacy with PIN sign-in. Your data stays yours.</p>
+</div>
+<div class="card">
+<h3>Team & League Ready</h3>
+<p>Track by team, league, or tournament. Generate summaries and CSVs for proposals and reports.</p>
+</div>
+<div class="card">
+<h3>Mobile-First</h3>
+<p>Designed to work perfectly on phones. Add an entry in seconds — even on the bench.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="grid3">
+<div class="card">
+<h2>How it works</h2>
+<p>Sign in with your PIN, add entries (income or expense), and view instant summaries by category, team, league, and program.</p>
+</div>
+<div class="card">
+<h2>Private by design</h2>
+<p>Each program sees only its data. Export CSV on demand for accounting or sponsor decks.</p>
+</div>
+<div class="card">
+<h2>Powered by Borico Labs</h2>
+<p>We build simple, resilient tools for youth sports programs in Puerto Rico and beyond.</p>
+</div>
+</div>
+</section>
+
+<section class="center">
+<a class="cta" href="https://cash.heybori.co" aria-label="Open Basketball Cash Flow app">Launch App</a>
+<div class="meta" style="margin-top:10px">Questions? <a href="mailto:heyborico@gmail.com">heyborico@gmail.com</a></div>
 </section>
 
 <div class="footer">
 <div class="wrap">
-© <span id="year"></span> Borico Labs LLC • Basketball Cash Flow
+© <span id="year"></span> Borico Labs LLC • Basketball Cash Flow • <a href="mailto:heyborico@gmail.com">Contact</a>
 </div>
 </div>
 </main>
 
 <script>
+// Current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
-
-const IS_IOS = /iP(hone|ad|od)/i.test(navigator.userAgent);
-const APP_BASE = "https://cash.heybori.co"; // your live app URL
-const CSV_PATH = "/exports/transactions.csv"; // your CSV path inside the app
-
-async function secureCsvDownload(url, filename='export.csv') {
-try {
-const headers = {};
-const token = localStorage.getItem('token') || localStorage.getItem('auth_token') || localStorage.getItem('bm_token');
-if (token) headers['Authorization'] = `Bearer ${token}`;
-const res = await fetch(url, { method:'GET', headers, credentials:'include' });
-if (res.status === 401 || res.status === 403) {
-// Redirect to login if not authorized
-window.location.href = `${APP_BASE}/login?redirect=${encodeURIComponent(CSV_PATH)}`;
-return;
-}
-if (!res.ok) return;
-
-const blob = await res.blob();
-const objectUrl = URL.createObjectURL(blob);
-if (IS_IOS) {
-window.location.href = objectUrl;
-setTimeout(()=>URL.revokeObjectURL(objectUrl),4000);
-} else {
-const a=document.createElement('a');
-a.href=objectUrl;
-a.download=filename;
-document.body.appendChild(a);
-a.click();
-a.remove();
-setTimeout(()=>URL.revokeObjectURL(objectUrl),1000);
-}
-} catch {}
-}
-
-(function(){
-const btn=document.getElementById('downloadCsv');
-if(!btn) return;
-btn.addEventListener('click',e=>{
-e.preventDefault();
-const fullUrl = `${APP_BASE}${CSV_PATH}`;
-secureCsvDownload(fullUrl,'transactions.csv');
-});
-})();
+// (Optional) place analytics snippet here later if needed.
 </script>
 </body>
 </html>
