@@ -102,10 +102,23 @@ Operated by <b>Borico Labs LLC</b>
 </main>
 
 <footer>
-<div class="wrap">
-© 2025 Hoopotia Institute Inc. &nbsp;•&nbsp; Operated by Borico Labs LLC<br>
-<a href="/privacy.html">Privacy Policy</a> • <a href="/terms.html">Terms of Use</a>
+<div class="wrap" style="
+text-align:center;
+color:#a7b1c2;
+font-size:13px;
+padding:18px 0;
+border-top:1px solid #232e3f;
+margin-top:40px;">
+
+© <span id="year"></span> Hoopotia Institute Inc. • Operated by Borico Labs LLC<br>
+<a href="/privacy.html" style="color:#9fc1ff; text-decoration:underline;">Privacy Policy</a> •
+<a href="/terms.html" style="color:#9fc1ff; text-decoration:underline;">Terms of Use</a> •
+<a href="/sponsorship-terms.html" style="color:#9fc1ff; text-decoration:underline;">Sponsorship Terms</a>
 </div>
 </footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
