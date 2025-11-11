@@ -40,10 +40,16 @@ border-bottom:1px solid var(--line);
 }
 .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0 }
 .brand{ display:flex; gap:10px; align-items:center }
-.logo{
-width:32px; height:32px; border-radius:8px; background:
-conic-gradient(from 200deg, #df3342, #df3342 35%, #ffffff 35%, #ffffff 55%, #1756ff 55%, #1756ff 100%);
-box-shadow:0 0 0 1px #0006 inset, 0 8px 20px rgba(0,0,0,.35);
+/* Hooporia logo sizing */
+.logo {
+height: 42px;
+width: auto;
+border-radius: 6px;
+}
+@media (max-width: 600px) {
+.logo {
+height: 34px;
+}
 }
 .title{ font-weight:800; letter-spacing:.2px }
 .badge{ font-size:12px; color:var(--muted) }
@@ -110,7 +116,7 @@ border-top:1px solid var(--line); color:var(--muted); font-size:13px; padding:16
 <header>
 <div class="wrap nav">
 <a href="/index.html" class="brand" style="text-decoration:none; color:inherit;">
-<div class="logo" aria-hidden="true"></div>
+<img src="images/hooporia-logo.png" alt="Hooporia Institute Inc. Logo" class="logo" />
 <div>
 <div class="title">Basketball Cash Flow</div>
 <div class="badge">by Hooporia Institute Inc.</div>
