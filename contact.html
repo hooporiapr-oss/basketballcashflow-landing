@@ -175,6 +175,15 @@ if (!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
 closeMenu();
 })();
 </script>
-
+<script>
+// Global nav closer that any link can call
+window.__closeNavMenu = function(){
+const btn = document.querySelector('.menu-btn');
+const nav = document.getElementById('site-nav');
+if (btn) btn.setAttribute('aria-expanded','false');
+if (nav) nav.classList.remove('open');
+document.body.style.overflow = '';
+};
+</script>
 </body>
 </html>
