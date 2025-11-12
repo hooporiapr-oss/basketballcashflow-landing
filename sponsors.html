@@ -135,7 +135,21 @@ a{ color:#9fc1ff; text-decoration:underline }
 <nav id="site-nav" class="nav-links">
 <a href="/about.html">About</a>
 <a href="/contact.html">Contact</a>
-<a href="/sponsors.html" onclick="window.__closeNavMenu()">Sponsors</a>
+
+<!-- 🔒 Bullet-proof Sponsors link -->
+<a href="/sponsors.html"
+onclick="(function(d){
+var b=d.querySelector('.menu-btn'), n=d.getElementById('site-nav');
+if(b){b.setAttribute('aria-expanded','false');}
+if(n){n.classList.remove('open');}
+d.body.style.overflow='';
+try{document.activeElement&&document.activeElement.blur();}catch(_){}
+/* If we’re already ON sponsors.html, stop default nav but keep the close */
+if(location.pathname==='/sponsors.html'){ return false; }
+})(document)">
+Sponsors
+</a>
+
 <a href="/media.html">Media</a>
 <a class="launch" href="https://cash.heybori.co">Launch App</a>
 </nav>
