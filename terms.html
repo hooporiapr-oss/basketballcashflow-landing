@@ -186,19 +186,41 @@ const btn = document.querySelector('.menu-btn');
 const nav = document.getElementById('site-nav');
 if(!btn || !nav) return;
 
+function closeMenu(){
+btn.setAttribute('aria-expanded','false');
+nav.classList.remove('open');
+document.body.style.overflow = '';
+}
 function toggle(){
 const exp = btn.getAttribute('aria-expanded') === 'true';
 btn.setAttribute('aria-expanded', String(!exp));
 nav.classList.toggle('open', !exp);
-document.body.style.overflow = (!exp ? 'hidden' : ''); // prevent background scroll
+document.body.style.overflow = (!exp ? 'hidden' : '');
 }
+
 btn.addEventListener('click', toggle);
-document.addEventListener('keydown', e => { if(e.key==='Escape'){ btn.setAttribute('aria-expanded','false'); nav.classList.remove('open'); document.body.style.overflow=''; }});
-document.addEventListener('click', e => {
-if (!nav.contains(e.target) && !btn.contains(e.target)){
-btn.setAttribute('aria-expanded','false'); nav.classList.remove('open'); document.body.style.overflow='';
-}
+
+// ✅ Close on ANY click inside the nav (works even if clicking current page link)
+nav.addEventListener('click', (e)=>{
+const a = e.target.closest('a');
+if (!a) return;
+// Close immediately so the menu never lingers
+closeMenu();
+// Let navigation proceed naturally
 });
+
+// Close on Esc
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
+
+// Close if you click outside
+document.addEventListener('click', e => {
+if (!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
+});
+
+// Safety: if the page was restored from bfcache, ensure menu is closed
+window.addEventListener('pageshow', closeMenu);
+window.addEventListener('hashchange', closeMenu);
+window.addEventListener('beforeunload', () => { document.body.style.overflow=''; });
 })();
 </script>
 </body>
