@@ -171,5 +171,26 @@ Basketball Cash Flow is a project operated by Hooporia Institute Inc., a registe
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script>
+(function(){
+const btn = document.querySelector('.menu-btn');
+const nav = document.getElementById('site-nav');
+if(!btn || !nav) return;
+
+function toggle(){
+const exp = btn.getAttribute('aria-expanded') === 'true';
+btn.setAttribute('aria-expanded', String(!exp));
+nav.classList.toggle('open', !exp);
+document.body.style.overflow = (!exp ? 'hidden' : ''); // prevent background scroll
+}
+btn.addEventListener('click', toggle);
+document.addEventListener('keydown', e => { if(e.key==='Escape'){ btn.setAttribute('aria-expanded','false'); nav.classList.remove('open'); document.body.style.overflow=''; }});
+document.addEventListener('click', e => {
+if (!nav.contains(e.target) && !btn.contains(e.target)){
+btn.setAttribute('aria-expanded','false'); nav.classList.remove('open'); document.body.style.overflow='';
+}
+});
+})();
+</script>
 </body>
 </html>
