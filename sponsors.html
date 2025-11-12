@@ -394,57 +394,43 @@ Basketball Cash Flow is a project operated by Hooporia Institute Inc., a registe
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-<!-- UNIVERSAL MOBILE MENU CLOSER -->
 <script>
 (function(){
-// Toggle handler (keeps your hamburger working)
 const btn = document.querySelector('.menu-btn');
 const nav = document.getElementById('site-nav');
+if(!btn || !nav) return;
 
 function closeMenu(){
-if (btn) btn.setAttribute('aria-expanded','false');
-if (nav) nav.classList.remove('open');
+btn.setAttribute('aria-expanded','false');
+nav.classList.remove('open');
 document.body.style.overflow = '';
 }
-function openMenu(){
-if (btn) btn.setAttribute('aria-expanded','true');
-if (nav) nav.classList.add('open');
-document.body.style.overflow = 'hidden';
-}
-
-if (btn && nav){
-btn.addEventListener('click', () => {
+function toggle(){
 const exp = btn.getAttribute('aria-expanded') === 'true';
-exp ? closeMenu() : openMenu();
-});
+btn.setAttribute('aria-expanded', String(!exp));
+nav.classList.toggle('open', !exp);
+document.body.style.overflow = (!exp ? 'hidden' : '');
 }
 
-// ✅ Close on ANY link click anywhere (Sponsors included, even if already on that page)
-document.addEventListener('click', (e)=>{
-if (e.target.closest('a')) closeMenu();
-}, true);
-document.addEventListener('pointerdown', (e)=>{
-if (e.target.closest('a')) closeMenu();
-}, true);
-document.addEventListener('touchstart', (e)=>{
-if (e.target.closest('a')) closeMenu();
-}, {capture:true, passive:true});
+// Toggle open/close
+btn.addEventListener('click', toggle);
 
-// Close on Esc / outside click
+// ✅ Close when any link INSIDE the nav is clicked (doesn’t affect the rest of the page)
+nav.addEventListener('click', (e)=>{
+if (e.target.closest('a')) closeMenu();
+}, true);
+
+// Esc key & outside click close
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
 document.addEventListener('click', e => {
-if (nav && btn && !nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
+if (!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
 });
 
-// Safety on lifecycle
-window.addEventListener('pageshow', closeMenu);
-window.addEventListener('hashchange', closeMenu);
-window.addEventListener('beforeunload', () => { document.body.style.overflow=''; });
-
-// Start closed
+// Make sure we start closed
 closeMenu();
 })();
 </script>
+
 
 </body>
 </html>
