@@ -43,6 +43,46 @@ a{ color:#9fc1ff; text-decoration:underline }
 .primary{ background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:#06221f; }
 .secondary{ border:2px solid #cfe2ff; color:#cfe2ff; }
 footer{ background:#0c1016; border-top:1px solid var(--line); text-align:center; padding:20px; margin-top:40px; font-size:0.9em; color:#a7b1c2 }
+/* Base */
+.nav-links a { margin-left:14px; color:var(--text); white-space:nowrap }
+.nav-links .launch{
+display:inline-block; padding:10px 14px; border-radius:10px;
+background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:var(--ctaTxt); font-weight:800;
+border:1px solid #1b2c3f; margin-left:14px;
+}
+
+/* Mobile hamburger */
+.menu-btn{
+display:none; position:relative; width:38px; height:34px; border:1px solid #2a3b55;
+border-radius:10px; background:#0f1724; cursor:pointer; margin-left:auto;
+}
+.menu-btn span{
+position:absolute; left:8px; right:8px; height:2px; background:#cfe2ff; border-radius:2px;
+transform-origin:center; transition:transform .25s, opacity .2s, top .25s;
+}
+.menu-btn span:nth-child(1){ top:9px }
+.menu-btn span:nth-child(2){ top:16px }
+.menu-btn span:nth-child(3){ top:23px }
+.menu-btn[aria-expanded="true"] span:nth-child(1){ top:16px; transform:rotate(45deg) }
+.menu-btn[aria-expanded="true"] span:nth-child(2){ opacity:0 }
+.menu-btn[aria-expanded="true"] span:nth-child(3){ top:16px; transform:rotate(-45deg) }
+
+/* Mobile layout */
+@media (max-width: 800px){
+.logo{ height:34px }
+.badge{ display:none } /* hide subline to reduce text */
+.nav-links{
+position:fixed; top:56px; right:12px; left:12px;
+background:rgba(13,18,32,.98); border:1px solid #2a3b55; border-radius:12px;
+padding:10px; display:none; flex-direction:column; gap:6px; z-index:9999;
+box-shadow:0 14px 28px rgba(0,0,0,.45);
+}
+.nav-links a{ margin:0; padding:10px 12px; border-radius:8px; border:1px solid transparent }
+.nav-links a:hover{ border-color:#2a3b55; background:#0b1320 }
+.nav-links.open{ display:flex }
+.menu-btn{ display:block }
+}
+
 </style>
 </head>
 
