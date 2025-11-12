@@ -1,19 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sponsorships — Basketball Cash Flow | Hooporia Institute Inc.</title>
-  <style>
-/* Responsive tier layout */
-@media (min-width: 900px) {
-.tiers.grid { grid-template-columns: repeat(3, 1fr); }
+<title>Sponsors — Basketball Cash Flow • Hooporia Institute Inc.</title>
+<meta name="description" content="Become a sponsor of Basketball Cash Flow by Hooporia Institute Inc. Support youth programs with Bronze, Silver, and Gold sponsorships or in-kind partnerships." />
+
+<style>
+:root{
+--bg:#0e1116; --bg2:#101620; --card:#151a22; --line:#1f2733; --text:#ecf1f8; --muted:#a7b1c2;
+--acc1:#2dd4bf; --acc2:#60a5fa; --cta:#2dd4bf; --ctaTxt:#06221f;
+--pill:#0b1320; --pillBr:#29415f;
 }
-@media (max-width: 899px) {
-.tiers.grid { grid-template-columns: 1fr; }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0; color:var(--text);
+background: radial-gradient(1200px 700px at 10% -10%, #112038 0%, transparent 60%),
+radial-gradient(1000px 600px at 90% -10%, #0c2a2a 0%, transparent 60%),
+linear-gradient(180deg, #0b0f14 0%, var(--bg) 100%);
+font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
+-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
-/* Base */
-.nav-links a { margin-left:14px; color:var(--text); white-space:nowrap }
+a{ color:inherit; text-decoration:none }
+.wrap{ max-width:1100px; margin:0 auto; padding:0 20px }
+
+/* Header */
+header{
+position:sticky; top:0; z-index:10;
+backdrop-filter:saturate(140%) blur(6px);
+background:rgba(10,14,20,.55);
+border-bottom:1px solid var(--line);
+}
+.nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0 }
+.brand{ display:flex; gap:10px; align-items:center }
+.logo{ height:42px; width:auto; border-radius:6px }
+.title{ font-weight:800; letter-spacing:.2px }
+.badge{ font-size:12px; color:var(--muted) }
+.nav-links a{ margin-left:14px; color:var(--text); white-space:nowrap }
 .nav-links .launch{
 display:inline-block; padding:10px 14px; border-radius:10px;
 background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:var(--ctaTxt); font-weight:800;
@@ -36,10 +60,10 @@ transform-origin:center; transition:transform .25s, opacity .2s, top .25s;
 .menu-btn[aria-expanded="true"] span:nth-child(2){ opacity:0 }
 .menu-btn[aria-expanded="true"] span:nth-child(3){ top:16px; transform:rotate(-45deg) }
 
-/* Mobile layout */
 @media (max-width: 800px){
 .logo{ height:34px }
-.badge{ display:none } /* hide subline to reduce text */
+.badge{ display:none }
+.menu-btn{ display:block }
 .nav-links{
 position:fixed; top:56px; right:12px; left:12px;
 background:rgba(13,18,32,.98); border:1px solid #2a3b55; border-radius:12px;
@@ -49,74 +73,51 @@ box-shadow:0 14px 28px rgba(0,0,0,.45);
 .nav-links a{ margin:0; padding:10px 12px; border-radius:8px; border:1px solid transparent }
 .nav-links a:hover{ border-color:#2a3b55; background:#0b1320 }
 .nav-links.open{ display:flex }
-.menu-btn{ display:block }
 }
 
-  </style>
-<meta name="description" content="Support Basketball Cash Flow through sponsorships that help youth basketball programs manage finances and grow sustainably under Hooporia Institute Inc.">
-<meta name="theme-color" content="#0e1116" />
-<style>
-:root{ --bg:#0e1116; --card:#151a22; --line:#1f2733; --text:#e8edf4; --muted:#a7b1c2; --acc1:#2dd4bf; --acc2:#60a5fa; }
-*{ box-sizing:border-box }
-body{ margin:0; background:linear-gradient(180deg,#0b0f14,#0e1116); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif }
-.wrap{ max-width:1100px; margin:0 auto; padding:0 20px }
-header{ position:sticky; top:0; z-index:10; background:rgba(10,14,20,.55); backdrop-filter:saturate(140%) blur(6px); border-bottom:1px solid var(--line) }
-.nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0 }
-.brand{ display:flex; gap:10px; align-items:center; color:inherit; text-decoration:none }
-/* Hooporia logo sizing */
-.logo {
-height: 42px;
-width: auto;
-border-radius: 6px;
+/* Page */
+.hero{ padding:36px 0 18px }
+.hero h1{ margin:0 0 8px 0; font-size:clamp(26px,4.4vw,40px); line-height:1.06 }
+.hero p{ color:var(--muted); max-width:820px; margin:8px 0 0 0 }
+
+.card{
+background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px;
+box-shadow:0 10px 26px rgba(0,0,0,.28); margin:14px 0;
 }
-@media (max-width: 600px) {
-.logo {
-height: 34px;
+h2{ margin:0 0 8px 0; font-size:20px; color:var(--acc2) }
+p{ margin:0 0 10px 0; color:var(--muted); line-height:1.55 }
+
+.pill{ display:inline-block; padding:2px 8px; border:1px solid var(--pillBr); background:var(--pill);
+color:#cfe2ff; border-radius:999px; font-size:12px }
+
+.cta{
+display:inline-block; padding:12px 16px; border-radius:12px; font-weight:900; letter-spacing:.2px;
+background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:var(--ctaTxt); border:none;
+box-shadow:0 8px 18px rgba(0,0,0,.25);
 }
+.cta.secondary{
+background:transparent; color:#d7e6ff; border:1px solid #2a3b55;
 }
-.title{ font-weight:800; letter-spacing:.2px }
-.badge{ font-size:12px; color:var(--muted) }
-.nav-links{ display:flex; gap:16px; align-items:center; margin-right:12px }
-.nav-links a{ color:#cfe2ff; text-decoration:none }
-.nav-cta a{ display:inline-block; padding:10px 14px; border-radius:10px; background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:#06221f; font-weight:800; border:1px solid #1b2c3f; text-decoration:none }
 
-main{ margin:28px auto 0; }
-.hero{ padding:36px 0 12px }
-.hero h1{ margin:0 0 8px 0; font-size:28px }
-.hero p{ margin:6px 0; color:var(--muted) }
-.cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:14px }
-.cta{ display:inline-block; padding:12px 16px; border-radius:12px; font-weight:800; text-decoration:none; }
-.cta.primary{ background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:#06221f; border:1px solid #1b2c3f }
-.cta.secondary{ background:transparent; color:#d7e6ff; border:1px solid #2a3b55 }
+.tiers{ display:grid; grid-template-columns:1fr; gap:16px }
+@media (min-width: 900px){ .tiers{ grid-template-columns:repeat(3,1fr) } }
+.tier h3{ margin:0 0 6px 0; font-size:18px }
+.tier ul{ margin:8px 0 0 18px; color:var(--muted) }
+.logos{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px }
+@media (min-width: 700px){ .logos{ grid-template-columns:repeat(4,1fr) } }
+.logoCell{
+background:#0f1622; border:1px dashed #29415f; border-radius:10px; padding:16px; text-align:center;
+min-height:90px; display:flex; align-items:center; justify-content:center;
+color:#8fb3ff; font-size:14px;
+}
 
-.grid{ display:grid; gap:16px; grid-template-columns:repeat(3,1fr) }
-@media (max-width:900px){ .grid{ grid-template-columns:1fr } }
-.card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:0 10px 26px rgba(0,0,0,.28) }
-h2{ margin:0 0 10px 0; font-size:22px }
-h3{ margin:0 0 6px 0; font-size:16px }
-p, li{ line-height:1.6; font-size:15px }
-ul{ margin:8px 0 0 0; padding-left:18px }
-.pill{ display:inline-block; padding:2px 8px; border:1px solid #29415f; border-radius:999px; background:#0b1320; color:#bcd3f0; font-size:12px }
-.center{ text-align:center }
-
-.tiers{ display:grid; gap:16px; grid-template-columns:repeat(4,1fr) }
-@media (max-width:1100px){ .tiers{ grid-template-columns:repeat(2,1fr) } }
-@media (max-width:600px){ .tiers{ grid-template-columns:1fr } }
-.tier{ background:#121823; border:1px solid #243047; border-radius:14px; padding:18px }
-.price{ font-size:22px; font-weight:800; margin:4px 0 8px 0 }
-.btn{ display:inline-block; margin-top:10px; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:800; border:1px solid #2a3b55; color:#d7e6ff }
-
-.sponsor-grid{ display:grid; gap:14px; grid-template-columns:repeat(5,1fr); align-items:center; }
-@media (max-width:1100px){ .sponsor-grid{ grid-template-columns:repeat(3,1fr) } }
-@media (max-width:700px){ .sponsor-grid{ grid-template-columns:repeat(2,1fr) } }
-.slogo{ background:#0f1622; border:1px solid #223049; border-radius:12px; min-height:72px; display:flex; align-items:center; justify-content:center; padding:10px }
-.slogo img{ max-width:100%; max-height:48px; object-fit:contain }
-
-footer .wrap{ text-align:center; color:#a7b1c2; font-size:13px; padding:18px 0; border-top:1px solid var(--line); margin-top:40px }
-a{ color:#9fc1ff; text-decoration:underline }
+.footer{ border-top:1px solid var(--line); color:var(--muted); font-size:13px; padding:16px 0; margin-top:20px }
+.footer a{ color:#9fc1ff; text-decoration:underline }
 </style>
 </head>
 <body>
+
+<!-- Header -->
 <header>
 <div class="wrap nav">
 <a href="/index.html" class="brand" aria-label="Go to homepage">
@@ -135,21 +136,8 @@ a{ color:#9fc1ff; text-decoration:underline }
 <nav id="site-nav" class="nav-links">
 <a href="/about.html">About</a>
 <a href="/contact.html">Contact</a>
-
-<!-- 🔒 Bullet-proof Sponsors link -->
-<a href="/sponsors.html"
-onclick="(function(d){
-var b=d.querySelector('.menu-btn'), n=d.getElementById('site-nav');
-if(b){b.setAttribute('aria-expanded','false');}
-if(n){n.classList.remove('open');}
-d.body.style.overflow='';
-try{document.activeElement&&document.activeElement.blur();}catch(_){}
-/* If we’re already ON sponsors.html, stop default nav but keep the close */
-if(location.pathname==='/sponsors.html'){ return false; }
-})(document)">
-Sponsors
-</a>
-
+<!-- Sponsors link includes a direct close call to guarantee closure on this page too -->
+<a href="/sponsors.html" onclick="(function(d){const b=d.querySelector('.menu-btn');const n=d.getElementById('site-nav');if(b)b.setAttribute('aria-expanded','false');if(n)n.classList.remove('open');d.body.style.overflow='';})(document)">Sponsors</a>
 <a href="/media.html">Media</a>
 <a class="launch" href="https://cash.heybori.co">Launch App</a>
 </nav>
@@ -157,257 +145,114 @@ Sponsors
 </header>
 
 <main class="wrap">
-<!-- HERO (Outreach / Press Style) -->
+<!-- HERO -->
 <section class="hero">
-<h1 style="font-size:32px; line-height:1.1; margin-bottom:8px;">
-Become a Founding Sponsor of Basketball Cash Flow
-</h1>
-<p style="margin:8px 0 0 0; color:var(--muted); max-width:820px;">
-Youth basketball runs on volunteers, heart, and hand-written ledgers. <b>Basketball Cash Flow</b> brings clarity and confidence to the front office — so coaches can spend less time chasing receipts and more time growing players and programs.
-</p>
-<p style="margin:8px 0 0 0; color:var(--muted); max-width:820px;">
-Operated by <b>Hooporia Institute Inc.</b> we grant access to programs at our discretion — even if a sponsor isn’t secured yet. <b>Your sponsorship sustains free access seats</b>, expands outreach, and keeps the platform improving season after season.
-</p>
+<h1>Become a Sponsor</h1>
+<p>Empower youth programs with financial clarity. Your sponsorship funds access seats for teams and leagues using Basketball Cash Flow across Puerto Rico and beyond.</p>
+</section>
 
-<div class="cta-row" style="margin-top:16px">
-<a class="cta primary" href="mailto:heyborico@gmail.com?subject=Corporate%20Sponsorship%20-%20Basketball%20Cash%20Flow">
-Talk to Us About Sponsorship
-</a>
-<a class="cta secondary" href="/sponsorship-terms.html">
-Sponsorship Terms &amp; Disclosure
-</a>
-<a class="cta secondary" href="mailto:heyborico@gmail.com?subject=Sponsored%20Access%20Request%20-%20Basketball%20Cash%20Flow">
-Request Sponsored Access (Programs)
-</a>
-</div>
-
-<div style="margin-top:14px; font-size:13px; color:#a7b1c2;">
-Recognized as a <b>marketing partnership</b> with Hoopotia Institute Inc. (508(c)); may be deductible as a business expense.
-</div>
-
-<div class="card" style="margin-top:18px; padding:16px;">
+<!-- VALUE POINTS -->
+<section class="card">
 <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;">
 <div>
 <div class="pill">Immediate Impact</div>
-<p style="margin:8px 0 0 0;">Fund seats that programs can use right away — no waitlist, no red tape.</p>
+<p style="margin-top:8px">Fund program seats that programs can use right away — no waitlist, no red tape.</p>
 </div>
 <div>
 <div class="pill">Transparent Outcomes</div>
-<p style="margin:8px 0 0 0;">We share anonymized quarterly impact notes: programs funded, usage, growth signals.</p>
+<p style="margin-top:8px">We share anonymized quarterly notes: programs funded, usage, and growth signals.</p>
 </div>
 <div>
 <div class="pill">Community First</div>
-<p style="margin:8px 0 0 0;">We prioritize community, nonprofit, and volunteer-led programs across Puerto Rico and beyond.</p>
-</div>
+<p style="margin-top:8px">We prioritize community, nonprofit, and volunteer-led programs across Puerto Rico.</p>
 </div>
 </div>
 </section>
-  <!-- SPONSORSHIP TIERS (Stripe-wired) -->
-<section class="card" style="margin-top:16px;">
-<h2 style="margin-top:0;">Sponsorship Tiers</h2>
-<div class="tiers grid" style="display:grid; gap:12px;">
-<!-- Bronze -->
-<div class="tier" style="background:#0f1622;border:1px solid #223049;border-radius:12px;padding:12px;">
-<h3 style="margin:0 0 6px 0;">Bronze</h3>
-<div class="price" style="font-weight:800;">$600</div>
-<p style="margin:6px 0 10px 0;color:#a7b1c2;">Funds 5 program seats (1 year).</p>
-<ul style="margin:0 0 12px 18px;color:#a7b1c2;">
-<li>Logo on Sponsors page</li>
-<li>Quarterly impact note</li>
-</ul>
-<a href="https://buy.stripe.com/bJecN6f5E9CE77QfFla7C03"
-target="_blank" rel="noopener"
-style="display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #2a3b55;text-decoration:none;font-weight:700;color:#06221f;background:linear-gradient(90deg,#2dd4bf,#60a5fa);">
-Sponsor at Bronze
-</a>
-</div>
 
-<!-- Silver -->
-<div class="tier" style="background:#0f1622;border:1px solid #223049;border-radius:12px;padding:12px;">
-<h3 style="margin:0 0 6px 0;">Silver</h3>
-<div class="price" style="font-weight:800;">$1,200</div>
-<p style="margin:6px 0 10px 0;color:#a7b1c2;">Funds 10 program seats (1 year).</p>
-<ul style="margin:0 0 12px 18px;color:#a7b1c2;">
-<li>Logo + link on Sponsors page</li>
-<li>Quarterly impact note</li>
-</ul>
-<a href="https://buy.stripe.com/00w8wQg9I024gIqgJpa7C04"
-target="_blank" rel="noopener"
-style="display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #2a3b55;text-decoration:none;font-weight:700;color:#06221f;background:linear-gradient(90deg,#2dd4bf,#60a5fa);">
-Sponsor at Silver
-</a>
-</div>
-
-<!-- Gold -->
-<div class="tier" style="background:#0f1622;border:1px solid #223049;border-radius:12px;padding:12px;">
-<h3 style="margin:0 0 6px 0;">Gold</h3>
-<div class="price" style="font-weight:800;">$3,000</div>
-<p style="margin:6px 0 10px 0;color:#a7b1c2;">Funds 25 program seats (1 year).</p>
-<ul style="margin:0 0 12px 18px;color:#a7b1c2;">
-<li>Featured logo + link</li>
-<li>Quarterly impact summary</li>
-</ul>
-<a href="https://buy.stripe.com/eVqbJ2f5E7uw0Js0Kra7C05"
-target="_blank" rel="noopener"
-style="display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #2a3b55;text-decoration:none;font-weight:700;color:#06221f;background:linear-gradient(90deg,#2dd4bf,#60a5fa);">
-Sponsor at Gold
-</a>
-</div>
-</div>
-
-<!-- In-Kind & Transportation Support -->
-<h2>In-Kind & Transportation Support</h2>
-<p style="font-style:italic; color:#9fc1ff; margin-top:-4px;">
-Contribute gear, goods, or services — every assist counts.
-</p>
-
-<p>
-We welcome partnerships that strengthen youth basketball programs across Puerto Rico —
-including uniforms, travel, meals, facilities, or equipment.
-Every contribution helps us expand access and ensure programs can focus on development, not fundraising.
-</p>
-
-<p>
-If your company or organization can provide goods or services, please reach out to us directly.
-Together, we can keep every team supplied and every season moving forward.
-</p>
-
-<ul style="text-align:left; max-width:700px; margin:16px auto; color:#a7b1c2; font-size:15px;">
-<li>Uniforms, shoes, and practice gear</li>
-<li>Team meals or hydration support</li>
-<li>Transportation or travel logistics</li>
-<li>Equipment donations (balls, scoreboards, etc.)</li>
-<li>Facility or gym partnerships</li>
-</ul>
-
-<section style="margin-top:24px;">
-<h3 style="margin-bottom:8px;">Transportation & Mobility Partners</h3>
-<p style="font-style:italic; color:#9fc1ff;">
-Keep the teams moving — every mile matters.
-</p>
-<p>
-Reliable transportation keeps youth programs connected — from local tournaments to island-wide events.
-We welcome partnerships with automobile brands, dealerships, and mobility companies that believe in
-fueling community basketball. Your vehicles, support services, or travel resources help us ensure every
-team can arrive, compete, and return home safely.
-</p>
-<p style="margin-top:10px;">
-From <b>equipment deliveries</b> to <b>tournament travel</b>, your support makes every assist possible.
-Automakers like <b>Fiat</b>, Kia, Toyota, and local dealerships can help keep the movement in motion —
-<i>Fiat Pa’lante!</i>
-</p>
-</section>
-
-<div class="cta-row" style="margin-top:16px;">
-<a class="cta primary" href="mailto:FiatPalante@gmail.com?subject=In-Kind%20Support%20Offer%20-%20Basketball%20Cash%20Flow">
-Offer In-Kind or Transportation Support
-</a>
-</div>
-
-<!-- Contact Us -->
-<section style="margin-top:32px;">
-<h3>Contact Us</h3>
-<p>
-Have a question or an idea for partnership?
-Reach out to us anytime — we’d love to connect with you.
-</p>
-<p>
-📧 <a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a><br>
-🏀 Hooporia Institute Inc. — <i>Fiat Pa’lante!</i>
-</p>
-</section>
-
-</a>
-</div>
-</section>
-  <section class="card" style="margin-top:14px; text-align:center;">
-<p style="font-size:16px; line-height:1.6; margin:0;">
-“Financial clarity is a competitive advantage. When coaches see the numbers, programs grow.”
-<br><span style="font-size:13px; color:#a7b1c2;">— Basketball Cash Flow, Mission Statement</span>
-</p>
-</section>
-
-<!-- IMPACT + EXPLANATION -->
+<!-- TIERS -->
 <section class="card">
-<h2>How Your Sponsorship Works</h2>
-<p><span class="pill">Mission-first</span> Programs never lose access for lack of funds — we grant access at our discretion to elevate the sport.</p>
-<p><span class="pill">Sponsor-powered</span> Your support sustains free access seats for teams, leagues, and community programs, and helps us improve the platform.</p>
-<p><span class="pill">Clear & compliant</span> Sponsorships are marketing partnerships with Hoopotia Institute Inc. (508(c)) and may be deductible as business expenses. The platform is operated by Hooporia Institute Inc.</p>
-</section>
-
-
-<!-- CURRENT SPONSORS (manual grid for now) -->
-<section class="card">
-<h2 class="center">Proud Sponsors</h2>
-<p class="center" style="color:var(--muted); margin-top:4px">We appreciate every partner who fuels access for youth programs.</p>
-<div class="sponsor-grid" style="margin-top:12px">
-<!-- Replace placeholder boxes with <img> logos when available -->
-<div class="slogo">Your Logo Here</div>
-<div class="slogo">Your Logo Here</div>
-<div class="slogo">Your Logo Here</div>
-<div class="slogo">Your Logo Here</div>
-<div class="slogo">Your Logo Here</div>
+<h2>Tiered Sponsorships</h2>
+<div class="tiers">
+<div class="tier card">
+<h3>Bronze</h3>
+<ul>
+<li>Support access for multiple teams</li>
+<li>Listed in Sponsors page</li>
+</ul>
+<p style="margin-top:10px">
+<a class="cta" href="https://buy.stripe.com/bJecN6f5E9CE77QfFla7C03" target="_blank" rel="noopener">Become Bronze</a>
+</p>
 </div>
-<p class="center" style="margin-top:12px">
-Want to be listed here? <a href="mailto:heyborico@gmail.com?subject=Sponsor%20Logo%20Submission%20-%20Basketball%20Cash%20Flow">Send your logo</a>.
+
+<div class="tier card">
+<h3>Silver</h3>
+<ul>
+<li>Support access across programs</li>
+<li>Logo placement in Sponsors page</li>
+</ul>
+<p style="margin-top:10px">
+<a class="cta" href="https://buy.stripe.com/00w8wQg9I024gIqgJpa7C04" target="_blank" rel="noopener">Become Silver</a>
 </p>
+</div>
+
+<div class="tier card">
+<h3>Gold</h3>
+<ul>
+<li>Fund full-season access seats</li>
+<li>Priority placement & updates</li>
+</ul>
+<p style="margin-top:10px">
+<a class="cta" href="https://buy.stripe.com/eVqbJ2f5E7uw0Js0Kra7C05" target="_blank" rel="noopener">Become Gold</a>
+</p>
+</div>
+</div>
 </section>
 
-<!-- FAQ -->
+<!-- IN-KIND & AUTO PARTNERS -->
 <section class="card">
-<h2>FAQ</h2>
-<h3>Are sponsorships tax-deductible?</h3>
-<p>Sponsorships are recognized as <b>marketing partnerships</b> with Hoopotia Institute Inc. (a 508(c) nonprofit) and may be deductible as business expenses. They are not charitable donations.</p>
+<h2>In-Kind & Community Partners</h2>
+<p>We also welcome in-kind support — equipment, uniforms, transportation, meals, and facilities. These partnerships place resources directly into gyms and communities.</p>
+<p style="margin-top:10px">
+<a class="cta secondary" href="mailto:FiatPalante@gmail.com?subject=In-Kind%20Sponsorship%20Inquiry">Contact Us About In-Kind Support</a>
+</p>
 
-<h3>Who operates the platform?</h3>
-<p>The Basketball Cash Flow platform is designed and operated by <b>Hooporia Institute Inc.</p>
-
-<h3>Do programs lose access if there’s no current sponsor?</h3>
-<p>No. We grant and maintain program access at our discretion to ensure equity and impact. Sponsorships help us expand and sustain that mission.</p>
+<div class="card" style="margin-top:12px">
+<h3 style="margin:0 0 8px 0">Automotive & Transportation Partners</h3>
+<p>Help teams get to practice and tournaments. Fleet support, vans, fuel vouchers, or travel stipends make a direct impact.</p>
+<p style="margin-top:10px">
+<a class="cta secondary" href="mailto:FiatPalante@gmail.com?subject=Automotive%20Partnership%20Inquiry">Discuss Automotive Partnership</a>
+</p>
+</div>
 </section>
 
-<section class="card" style="
-background:#121823;
-border:1px solid #243047;
-border-radius:12px;
-padding:18px;
-margin-top:32px;">
+<!-- SPONSOR LOGOS (placeholders) -->
+<section class="card">
+<h2>Current Sponsors</h2>
+<div class="logos">
+<!-- Replace placeholders with actual logos when approved -->
+<div class="logoCell">Your Logo Here</div>
+<div class="logoCell">Your Logo Here</div>
+<div class="logoCell">Your Logo Here</div>
+<div class="logoCell">Your Logo Here</div>
+</div>
+</section>
 
-<h2 style="margin-top:0;">Sponsorship Statement</h2>
-<p style="color:#a7b1c2; line-height:1.6;">
-<strong>Basketball Cash Flow Sponsorships</strong> are mission partnerships that support youth basketball growth and
-financial transparency across Puerto Rico and beyond.
-</p>
-<p style="color:#a7b1c2; line-height:1.6;">
-Sponsors directly fund access seats, program outreach, and platform improvements that help coaches, leagues,
-and community programs manage their finances with confidence.
-</p>
-<p style="color:#a7b1c2; line-height:1.6;">
-This initiative is operated by <strong><Hooporia Institute Inc./strong> in mission partnership with
-<strong>Hoopotia Institute Inc. (508(c))</strong>, a nonprofit focused on advancing youth basketball development and
-education.
-</p>
-<p style="color:#a7b1c2; line-height:1.6;">
-Sponsorships are recognized as <strong>business marketing partnerships</strong> — they are not tax-deductible donations
-under Act 60 or any government program. All sponsorships are acknowledged transparently and used to sustain and expand
-the Basketball Cash Flow platform.
+<!-- DISCLOSURE -->
+<section class="card">
+<p style="font-size:13px; color:#a7b1c2;">
+Sponsorships are recognized as marketing partnerships with Hooporia Institute Inc. (508(c)). They may be deductible as a business expense. We do not process Act 60/CCDF donations; our model is sponsorship-focused.
 </p>
 </section>
-  
+
+<div class="footer">
+<div class="wrap">
+© <span id="year"></span> Hooporia Institute Inc. • EIN [add] • UEI [add] •
+<a href="/privacy.html">Privacy</a> • <a href="/terms.html">Terms</a>
+</div>
+</div>
 </main>
 
-<footer style="border-top:1px solid #243047; color:#a7b1c2; font-size:13px; text-align:center; padding:20px; margin-top:40px;">
-© <script>document.write(new Date().getFullYear());</script> Hooporia Institute Inc. — All Rights Reserved.<br>
-EIN: [66-1104700] • UEI: [T411JSGE5L65]<br>
-Basketball Cash Flow is a project operated by Hooporia Institute Inc., a registered nonprofit organization dedicated to advancing youth basketball transparency and development.<br>
-<a href="privacy.html" style="color:#9fc1ff; text-decoration:underline;">Privacy Policy</a> •
-<a href="terms.html" style="color:#9fc1ff; text-decoration:underline;">Terms of Use</a> •
-<a href="mailto:heyborico@gmail.com" style="color:#9fc1ff; text-decoration:underline;">Contact Us</a>
-</footer>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<!-- Mobile menu script (scoped & safe) -->
 <script>
 (function(){
 const btn = document.querySelector('.menu-btn');
@@ -430,23 +275,29 @@ const exp = btn.getAttribute('aria-expanded') === 'true';
 exp ? closeMenu() : openMenu();
 }
 
-// Toggle button
+// Toggle
 btn.addEventListener('click', toggle);
 
-// Close when any link INSIDE the nav is clicked (captures Sponsors too)
+// Close when any link INSIDE the nav is clicked (works even if link is current page like /sponsors.html)
 nav.addEventListener('click', (e)=>{
 if (e.target.closest('a')) closeMenu();
 }, true);
 
-// Close on Esc / outside / page (re)show
+// Close on Esc / outside
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
 document.addEventListener('click', e => {
 if (!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
 });
-window.addEventListener('pageshow', closeMenu);
+
+// Ensure starting state is closed
+closeMenu();
 })();
 </script>
 
-  
+<script>
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
