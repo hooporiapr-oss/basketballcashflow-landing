@@ -180,48 +180,57 @@ Basketball Cash Flow is a project operated by Hooporia Institute Inc., a registe
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<!-- UNIVERSAL MOBILE MENU CLOSER -->
 <script>
 (function(){
+// Toggle handler (keeps your hamburger working)
 const btn = document.querySelector('.menu-btn');
 const nav = document.getElementById('site-nav');
-if(!btn || !nav) return;
 
 function closeMenu(){
-btn.setAttribute('aria-expanded','false');
-nav.classList.remove('open');
+if (btn) btn.setAttribute('aria-expanded','false');
+if (nav) nav.classList.remove('open');
 document.body.style.overflow = '';
 }
-function toggle(){
-const exp = btn.getAttribute('aria-expanded') === 'true';
-btn.setAttribute('aria-expanded', String(!exp));
-nav.classList.toggle('open', !exp);
-document.body.style.overflow = (!exp ? 'hidden' : '');
+function openMenu(){
+if (btn) btn.setAttribute('aria-expanded','true');
+if (nav) nav.classList.add('open');
+document.body.style.overflow = 'hidden';
 }
 
-btn.addEventListener('click', toggle);
-
-// ✅ Close on ANY click inside the nav (works even if clicking current page link)
-nav.addEventListener('click', (e)=>{
-const a = e.target.closest('a');
-if (!a) return;
-// Close immediately so the menu never lingers
-closeMenu();
-// Let navigation proceed naturally
+if (btn && nav){
+btn.addEventListener('click', () => {
+const exp = btn.getAttribute('aria-expanded') === 'true';
+exp ? closeMenu() : openMenu();
 });
+}
 
-// Close on Esc
+// ✅ Close on ANY link click anywhere (Sponsors included, even if already on that page)
+document.addEventListener('click', (e)=>{
+if (e.target.closest('a')) closeMenu();
+}, true);
+document.addEventListener('pointerdown', (e)=>{
+if (e.target.closest('a')) closeMenu();
+}, true);
+document.addEventListener('touchstart', (e)=>{
+if (e.target.closest('a')) closeMenu();
+}, {capture:true, passive:true});
+
+// Close on Esc / outside click
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
-
-// Close if you click outside
 document.addEventListener('click', e => {
-if (!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
+if (nav && btn && !nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
 });
 
-// Safety: if the page was restored from bfcache, ensure menu is closed
+// Safety on lifecycle
 window.addEventListener('pageshow', closeMenu);
 window.addEventListener('hashchange', closeMenu);
 window.addEventListener('beforeunload', () => { document.body.style.overflow=''; });
+
+// Start closed
+closeMenu();
 })();
 </script>
+
 </body>
 </html>
