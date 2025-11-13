@@ -3,219 +3,246 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sponsorship Terms & Disclosure — Basketball Cash Flow</title>
-<meta name="description" content="Sponsorship Terms & Disclosure for Basketball Cash Flow, operated by Hooporia Institute Inc. with Hoopotia Institute Inc. (508(c))." />
+<title>Sponsorship Terms & Disclosure — Hoops Money</title>
+<meta name="description" content="Sponsorship Terms & Disclosure for Hoops Money, operated by Hooporia Institute Inc." />
 <meta name="theme-color" content="#0e1116" />
+
 <style>
-/* Nav links */
-.nav-links{ display:flex; gap:16px; align-items:center; margin-right:12px }
-.nav-links a{ color:#cfe2ff; }
-@media (max-width:900px){ .nav-links{ gap:12px } }
+:root{
+--bg:#0e1116; --card:#151a22; --line:#1f2733; --text:#e8edf4; --muted:#a7b1c2;
+--accent:#2dd4bf; --accent2:#60a5fa;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
+color:var(--text);
+background:linear-gradient(180deg,#0b0f14,#0e1116);
+-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:20px}
 
-:root{ --bg:#0e1116; --card:#151a22; --line:#1f2733; --text:#e8edf4; --muted:#a7b1c2; --acc1:#2dd4bf; --acc2:#60a5fa; }
-*{ box-sizing:border-box }
-body{ margin:0; background:linear-gradient(180deg,#0b0f14,#0e1116); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif }
-.wrap{ max-width:1100px; margin:0 auto; padding:0 20px }
-header{ position:sticky; top:0; z-index:10; background:rgba(10,14,20,.55); backdrop-filter:saturate(140%) blur(6px); border-bottom:1px solid var(--line) }
-.nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0 }
-.brand{ display:flex; gap:10px; align-items:center; text-decoration:none; color:inherit }
-/* Hooporia logo sizing */
-.logo {
-height: 42px;
-width: auto;
-border-radius: 6px;
+/* Header */
+header{
+padding:16px 0 8px 0;
+border-bottom:1px solid var(--line);
 }
-@media (max-width: 600px) {
-.logo {
-height: 34px;
-}
-}
-.title{ font-weight:800; letter-spacing:.2px }
-.badge{ font-size:12px; color:var(--muted) }
-.nav-cta a{ display:inline-block; padding:10px 14px; border-radius:10px; background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:#06221f; font-weight:800; border:1px solid #1b2c3f }
+.logo-row{display:flex;align-items:center;gap:10px}
+.logo-row img{height:40px;width:auto;border-radius:6px}
+.logo-text{font-weight:800;letter-spacing:.2px}
+.logo-sub{font-size:12px;color:var(--muted)}
 
-main{ max-width:900px; margin:28px auto; padding:0 20px }
-.card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; box-shadow:0 10px 26px rgba(0,0,0,.28) }
-h1{ margin:0 0 12px 0; font-size:24px }
-h2{ margin:22px 0 8px 0; font-size:18px }
-p, li{ color:var(--text); line-height:1.6; font-size:15px }
-ul{ padding-left:20px; margin:6px 0 0 0 }
-.meta{ color:var(--muted); font-size:13px; margin-bottom:8px }
-a{ color:#9fc1ff; text-decoration:underline }
-footer .wrap{ text-align:center; color:#a7b1c2; font-size:13px; padding:18px 0; border-top:1px solid var(--line); margin-top:40px }
-/* Base */
-.nav-links a { margin-left:14px; color:var(--text); white-space:nowrap }
-.nav-links .launch{
-display:inline-block; padding:10px 14px; border-radius:10px;
-background:linear-gradient(90deg,var(--acc1),var(--acc2)); color:var(--ctaTxt); font-weight:800;
-border:1px solid #1b2c3f; margin-left:14px;
+/* Card Layout */
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:12px;
+padding:18px;
+margin-top:18px;
 }
+h1{margin:18px 0 10px;font-size:26px}
+h2{margin:20px 0 8px;font-size:18px}
+p{margin:0 0 10px;color:var(--muted);line-height:1.6}
+ul{margin:0 0 12px 18px;color:var(--muted)}
+li{margin:4px 0}
+.meta-line{font-size:13px;color:var(--muted);margin-bottom:12px}
 
-/* Mobile hamburger */
-.menu-btn{
-display:none; position:relative; width:38px; height:34px; border:1px solid #2a3b55;
-border-radius:10px; background:#0f1724; cursor:pointer; margin-left:auto;
+/* Toggle */
+.lang-toggle{
+display:inline-flex;border-radius:999px;border:1px solid var(--line);
+overflow:hidden;margin-top:10px
 }
-.menu-btn span{
-position:absolute; left:8px; right:8px; height:2px; background:#cfe2ff; border-radius:2px;
-transform-origin:center; transition:transform .25s, opacity .2s, top .25s;
+.lang-toggle button{
+background:transparent;border:none;padding:6px 12px;
+color:var(--muted);cursor:pointer;font-size:12px
 }
-.menu-btn span:nth-child(1){ top:9px }
-.menu-btn span:nth-child(2){ top:16px }
-.menu-btn span:nth-child(3){ top:23px }
-.menu-btn[aria-expanded="true"] span:nth-child(1){ top:16px; transform:rotate(45deg) }
-.menu-btn[aria-expanded="true"] span:nth-child(2){ opacity:0 }
-.menu-btn[aria-expanded="true"] span:nth-child(3){ top:16px; transform:rotate(-45deg) }
-
-/* Mobile layout */
-@media (max-width: 800px){
-.logo{ height:34px }
-.badge{ display:none } /* hide subline to reduce text */
-.nav-links{
-position:fixed; top:56px; right:12px; left:12px;
-background:rgba(13,18,32,.98); border:1px solid #2a3b55; border-radius:12px;
-padding:10px; display:none; flex-direction:column; gap:6px; z-index:9999;
-box-shadow:0 14px 28px rgba(0,0,0,.45);
-}
-.nav-links a{ margin:0; padding:10px 12px; border-radius:8px; border:1px solid transparent }
-.nav-links a:hover{ border-color:#2a3b55; background:#0b1320 }
-.nav-links.open{ display:flex }
-.menu-btn{ display:block }
+.lang-toggle button.active{
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+color:#041214;font-weight:700;
 }
 
+/* Footer */
+.footer{
+border-top:1px solid #243047;color:#a7b1c2;font-size:13px;
+text-align:center;padding:20px;margin-top:40px
+}
+.footer a{color:#9fc1ff;text-decoration:underline}
 </style>
 </head>
+
 <body>
+<main class="wrap">
 <header>
-<div class="wrap nav">
-<a href="/index.html" class="brand" aria-label="Go to homepage">
+<div class="logo-row">
+<a href="/index.html" style="display:flex;gap:10px;align-items:center;color:inherit;text-decoration:none;">
 <img src="/images/hooporia-logo.png" alt="Hooporia Institute Inc. Logo" class="logo" />
 <div>
-<div class="title">Basketball Cash Flow</div>
-<div class="badge">by Hooporia Institute Inc.</div>
+<div class="logo-text">Hoops Money</div>
+<div class="logo-sub">Operated by Hooporia Institute Inc.</div>
 </div>
 </a>
+</div>
 
-<!-- Mobile menu button -->
-<button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
-<span></span><span></span><span></span>
-</button>
-
-<nav id="site-nav" class="nav-links">
-<a href="/about.html">About</a>
-<a href="/contact.html">Contact</a>
-<a href="/sponsors.html" onclick="window.__closeNavMenu()">Sponsors</a>
-<a href="/media.html">Media</a>
-<a class="launch" href="https://cash.heybori.co">Launch App</a>
-</nav>
+<div class="lang-toggle">
+<button id="btn-en" class="active">EN</button>
+<button id="btn-es">ES (PR)</button>
 </div>
 </header>
 
-<main class="wrap">
-<div class="card">
-<h1>Sponsorship Terms &amp; Disclosure</h1>
-<div class="meta">Effective Date: <b>November 2025</b> • Issued by: <b>Hoopotia Institute Inc. (508(c))</b> • Operated by: <b>Hooporia Institute Inc.</b></div>
 
-<h2>1. Purpose</h2>
-<p>These Sponsorship Terms outline the relationship between <b>Hoopotia Institute Inc.</b> (“the Institute”) and any business, organization, or individual (“Sponsor”) providing financial or in-kind support for the <b>Basketball Cash Flow</b> initiative. The goal of this partnership is to sustain free access to Basketball Cash Flow for youth basketball programs, leagues, and community organizations.</p>
-
-<h2>2. Nature of Sponsorship</h2>
-<p>Sponsorships are classified as <b>marketing partnerships</b>, not charitable donations. Sponsors receive public acknowledgment, branding, and promotional visibility in return for their support, which may include logo placement, recognition on reports, or program listings.</p>
-<p>Because a marketing benefit is provided, sponsorship payments are <b>not tax-deductible as charitable contributions</b> but <b>may be deductible as business marketing expenses</b> under IRS Section 162.</p>
-
-<h2>3. Sponsorship Benefits</h2>
-<ul>
-<li>Logo placement within the Basketball Cash Flow app or website</li>
-<li>Recognition in reports, summaries, or event materials</li>
-<li>Public acknowledgment on Hoopotia Institute Inc. platforms</li>
-<li>Optional sponsor features on the sponsors directory page</li>
-</ul>
-<p>The Institute reserves the right to approve all sponsor messaging and placements to ensure alignment with its mission and community standards.</p>
-
-<h2>4. Sponsorship Payments</h2>
-<p>All sponsorship payments are processed through <b>Hoopotia Institute Inc.</b>, a 508(c) nonprofit organization. Funds are used to:</p>
-<ul>
-<li>Maintain and improve the Basketball Cash Flow platform</li>
-<li>Support free access for youth programs</li>
-<li>Advance Hoopotia Institute’s broader mission in basketball education and community development</li>
-</ul>
-<p><b>Hooporia Institute Inc.C</b> provides technology and operational support under service agreements with the Institute. Payment may be made via check, electronic transfer, or online processing as designated by Hoopotia Institute Inc.</p>
-
-<h2>5. Acknowledgment and Term</h2>
-<p>Sponsors will receive written acknowledgment of their partnership and the corresponding benefits. Sponsorship terms typically run for <b>12 months</b> from the effective date unless otherwise stated.</p>
-
-<h2>6. Rights and Limitations</h2>
-<p>Hoopotia Institute Inc. retains full discretion over program participation and sponsor recognition. Sponsorships do not grant control, ownership, or decision-making authority over any program or platform. Both parties agree to act in good faith to uphold the spirit and purpose of the partnership.</p>
-
-<h2>7. Contact</h2>
-<p>For sponsorship inquiries or documentation:<br>
-📧 <a href="mailto:heyborico@gmail.com">heyborico@gmail.com</a><br>
-🏀 Hoopotia Institute Inc. — “Let’s Go Pa’lante”<br>
-Operated by <b>Hooporia Institute Inc.</b>
+<!-- ░░░ ENGLISH VERSION ░░░ -->
+<section id="terms-en" class="card">
+<h1>Sponsorship Terms & Disclosure</h1>
+<p class="meta-line">
+<b>Effective Date:</b> November 2025 • <b>Operated by:</b> Hooporia Institute Inc.
 </p>
 
-<h2 style="margin-top:24px">Disclosure (Public-Friendly)</h2>
-<p><i>Sponsorships for Basketball Cash Flow are recognized as marketing partnerships with Hoopotia Institute Inc., a 508(c) nonprofit organization, and may be deductible as business expenses. Basketball Cash Flow is powered by Hooporia Institute Inc. in mission partnership with the Institute.</i></p>
-</div>
+<h2>1. Purpose</h2>
+<p>
+These Terms explain the relationship between <b>Hooporia Institute Inc.</b> (“the Institute”) and any Sponsor who provides financial or in-kind support for <b>Hoops Money</b>. Sponsorship support helps us grant free access seats to youth programs, leagues, and community teams.
+</p>
+
+<h2>2. Nature of Sponsorship</h2>
+<p>
+Sponsorships are treated as <b>marketing partnerships</b>, not tax-deductible charitable donations. Sponsors receive visibility and acknowledgement in return for support.
+</p>
+<p>
+Because value is exchanged, sponsorships may be deductible as <b>business marketing expenses</b> under IRS Section 162.
+</p>
+
+<h2>3. Sponsor Benefits</h2>
+<ul>
+<li>Logo placement on the Hoops Money website or sponsor section</li>
+<li>Recognition in reports and community communications</li>
+<li>Optional feature highlights for major supporters</li>
+<li>Eligibility for special sponsor categories (equipment, uniforms, travel support)</li>
+</ul>
+
+<h2>4. Use of Sponsorship Funds</h2>
+<p>
+All sponsorship funds are used to:
+</p>
+<ul>
+<li>Provide free Hoops Money access to youth programs</li>
+<li>Support system maintenance and improvements</li>
+<li>Advance Hooporia Institute’s mission in youth basketball development</li>
+</ul>
+
+<h2>5. Sponsorship Term</h2>
+<p>
+A standard sponsorship term lasts <b>12 months</b>, unless otherwise specified.
+</p>
+
+<h2>6. Rights and Limitations</h2>
+<p>
+Hooporia Institute Inc. retains full discretion over sponsor placement, recognition, and program eligibility. Sponsorship does not grant any operational control or ownership of Hoops Money.
+</p>
+
+<h2>7. Contact</h2>
+<p>
+📧 <a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a><br>
+🏀 Hooporia Institute Inc. — “Fiat Pa’lante”
+</p>
+
+<h2>Public Disclosure</h2>
+<p>
+<i>
+Sponsorships for Hoops Money are recognized as marketing partnerships with Hooporia Institute Inc. and may be deductible as business expenses.
+</i>
+</p>
+</section>
+
+
+
+<!-- ░░░ SPANISH (PR) VERSION ░░░ -->
+<section id="terms-es" class="card" style="display:none">
+<h1>Términos de Auspicio y Divulgación</h1>
+<p class="meta-line">
+<b>Fecha de vigencia:</b> noviembre 2025 • <b>Operado por:</b> Hooporia Institute Inc.
+</p>
+
+<h2>1. Propósito</h2>
+<p>
+Estos Términos explican la relación entre <b>Hooporia Institute Inc.</b> (“el Instituto”) y cualquier Auspiciador que provea apoyo financiero o en especie para <b>Hoops Money</b>. Este apoyo permite que otorguemos acceso gratuito a programas juveniles, ligas y equipos comunitarios.
+</p>
+
+<h2>2. Naturaleza del Auspicio</h2>
+<p>
+Los auspicios se consideran <b>acuerdos de mercadeo</b>, no donaciones caritativas deducibles. A cambio del apoyo, el auspiciador recibe visibilidad y reconocimiento.
+</p>
+<p>
+Por este intercambio de valor, los aportes pueden ser deducibles como <b>gastos de mercadeo</b> bajo la Sección 162 del IRS.
+</p>
+
+<h2>3. Beneficios del Auspiciador</h2>
+<ul>
+<li>Logo en la página web o sección de auspiciadores</li>
+<li>Reconocimiento en informes y comunicaciones comunitarias</li>
+<li>Destacado opcional para auspiciadores mayores</li>
+<li>Elegibilidad para categorías especiales (equipo, uniformes, transporte)</li>
+</ul>
+
+<h2>4. Uso de Fondos</h2>
+<p>Los fondos de auspicio se utilizan para:</p>
+<ul>
+<li>Proveer acceso gratuito a Hoops Money para programas juveniles</li>
+<li>Mantener y mejorar la plataforma</li>
+<li>Apoyar la misión del Instituto en el desarrollo del baloncesto juvenil</li>
+</ul>
+
+<h2>5. Duración del Auspicio</h2>
+<p>La duración estándar del auspicio es de <b>12 meses</b>, salvo que se acuerde otra cosa.</p>
+
+<h2>6. Derechos y Limitaciones</h2>
+<p>
+El Instituto mantiene total discreción sobre colocación del auspiciador, reconocimiento y elegibilidad de programas. El auspicio no otorga control operativo ni propiedad de Hoops Money.
+</p>
+
+<h2>7. Contacto</h2>
+<p>
+📧 <a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a><br>
+🏀 Hooporia Institute Inc. — “Fiat Pa’lante”
+</p>
+
+<h2>Divulgación Pública</h2>
+<p>
+<i>
+Los auspicios de Hoops Money se reconocen como acuerdos de mercadeo con Hooporia Institute Inc. y pueden ser deducibles como gastos de negocio.
+</i>
+</p>
+</section>
 </main>
 
-<footer style="border-top:1px solid #243047; color:#a7b1c2; font-size:13px; text-align:center; padding:20px; margin-top:40px;">
+
+<footer class="footer">
 © <script>document.write(new Date().getFullYear());</script> Hooporia Institute Inc. — All Rights Reserved.<br>
-EIN: [66-1104700] • UEI: [T411JSGE5L65]<br>
-Basketball Cash Flow is a project operated by Hooporia Institute Inc., a registered nonprofit organization dedicated to advancing youth basketball transparency and development.<br>
-<a href="privacy.html" style="color:#9fc1ff; text-decoration:underline;">Privacy Policy</a> •
-<a href="terms.html" style="color:#9fc1ff; text-decoration:underline;">Terms of Use</a> •
-<a href="mailto:heyborico@gmail.com" style="color:#9fc1ff; text-decoration:underline;">Contact Us</a>
+EIN: 66-1104700 • UEI: T411JSGE5L65<br>
+Hoops Money is operated by Hooporia Institute Inc., supporting youth basketball development.<br>
+<a href="/privacy.html">Privacy Policy</a> •
+<a href="/terms.html">Terms of Use</a> •
+<a href="mailto:FiatPalante@gmail.com">Contact Us</a>
 </footer>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
 (function(){
-const btn = document.querySelector('.menu-btn');
-const nav = document.getElementById('site-nav');
-if(!btn || !nav) return;
+const en=document.getElementById('terms-en');
+const es=document.getElementById('terms-es');
+const btnEn=document.getElementById('btn-en');
+const btnEs=document.getElementById('btn-es');
 
-function closeMenu(){
-btn.setAttribute('aria-expanded','false');
-nav.classList.remove('open');
-document.body.style.overflow = '';
-}
-function toggle(){
-const exp = btn.getAttribute('aria-expanded') === 'true';
-btn.setAttribute('aria-expanded', String(!exp));
-nav.classList.toggle('open', !exp);
-document.body.style.overflow = (!exp ? 'hidden' : '');
-}
-
-// Toggle open/close
-btn.addEventListener('click', toggle);
-
-// ✅ Close when any link INSIDE the nav is clicked (doesn’t affect the rest of the page)
-nav.addEventListener('click', (e)=>{
-if (e.target.closest('a')) closeMenu();
-}, true);
-
-// Esc key & outside click close
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
-document.addEventListener('click', e => {
-if (!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
-});
-
-// Make sure we start closed
-closeMenu();
-})();
-</script>
-<script>
-// Global nav closer that any link can call
-window.__closeNavMenu = function(){
-const btn = document.querySelector('.menu-btn');
-const nav = document.getElementById('site-nav');
-if (btn) btn.setAttribute('aria-expanded','false');
-if (nav) nav.classList.remove('open');
-document.body.style.overflow = '';
+btnEn.onclick=function(){
+en.style.display='block';
+es.style.display='none';
+btnEn.classList.add('active');
+btnEs.classList.remove('active');
 };
+btnEs.onclick=function(){
+en.style.display='none';
+es.style.display='block';
+btnEn.classList.remove('active');
+btnEs.classList.add('active');
+};
+})();
 </script>
 </body>
 </html>
