@@ -3,28 +3,22 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hoops Money — Sponsors & In-Kind Support</title>
-<meta name="description" content="Hoops Money sponsorships through Hooporia Institute Inc. Help fund youth basketball programs with cash and in-kind support.">
+<title>Hoops Cash — Hooporia Institute Inc.</title>
+<meta name="description" content="Hoops Cash is a project operated by Hooporia Institute Inc., a nonprofit organization advancing youth basketball transparency and development through sponsorship support." />
 <meta name="theme-color" content="#0e1116" />
 
 <style>
 :root{
---bg:#0e1116; --card:#161c26; --line:#232e3f; --text:#ecf1f8; --muted:#a7b1c2;
---acc1:#2dd4bf; --acc2:#60a5fa; --ctaTxt:#06221f;
+--bg:#0e1116;--card:#161c26;--line:#232e3f;--text:#ecf1f8;--muted:#a7b1c2;
+--acc1:#2dd4bf;--acc2:#60a5fa;--ctaTxt:#06221f;
 }
 *{box-sizing:border-box}
 body{
 margin:0;
 font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
 color:var(--text);
-background:
-radial-gradient(1200px 700px at 10% -10%, #112038 0%, transparent 60%),
-radial-gradient(1000px 600px at 90% -10%, #0c2a2a 0%, transparent 60%),
-linear-gradient(180deg, #0b0f14 0%, #0e1116 100%);
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
+background:linear-gradient(180deg,#0b0f14 0%,#0e1116 100%);
 }
-a{color:inherit;text-decoration:none}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
 /* HEADER */
@@ -35,8 +29,11 @@ background:rgba(10,14,20,.55);
 border-bottom:1px solid var(--line);
 }
 .nav{
-display:flex;align-items:center;justify-content:space-between;
-padding:14px 0;gap:12px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 0;
+gap:12px;
 }
 .brand{display:flex;gap:10px;align-items:center}
 .logo{height:42px;width:auto;border-radius:6px}
@@ -44,103 +41,87 @@ padding:14px 0;gap:12px;
 .title{font-weight:800;letter-spacing:.2px}
 .badge{font-size:12px;color:var(--muted)}
 
-/* LANGUAGE TOGGLE */
+/* LANG TOGGLE */
 .lang-toggle{display:flex;gap:8px;margin-left:auto}
 .lang-toggle button{
-border:1px solid #2a3b55;background:#0d1320;color:#cfe2ff;
-border-radius:20px;padding:6px 10px;cursor:pointer;font-size:12px
+border:1px solid #2a3b55;
+background:#0d1320;
+color:#cfe2ff;
+border-radius:20px;
+padding:6px 10px;
+cursor:pointer;
+font-size:12px;
 }
 .lang-toggle button.active{
 background:linear-gradient(90deg,var(--acc1),var(--acc2));
-color:var(--ctaTxt);border:none;font-weight:800
+color:var(--ctaTxt);
+border:none;
+font-weight:800;
 }
 [data-lang="en"] .lang-es{display:none}
 [data-lang="es"] .lang-en{display:none}
 
-/* HERO */
-.hero{padding:52px 0 32px}
+/* HERO + CONTENT */
+.hero{padding:64px 0 36px}
 .h-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
 @media(max-width:900px){.h-grid{grid-template-columns:1fr}}
 .h-lead h1{
 margin:0 0 10px 0;
-font-size:clamp(28px,4.6vw,42px);
+font-size:clamp(28px,4.6vw,44px);
 line-height:1.05;
 }
-.h-lead p{
-color:var(--muted);
-font-size:clamp(16px,2.8vw,18px);
-margin:8px 0 0 0;
-}
+.h-lead p{color:var(--muted);font-size:clamp(16px,2.8vw,18px)}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 .cta{
-display:inline-block;padding:13px 18px;border-radius:12px;
-font-weight:900;letter-spacing:.2px;
+display:inline-block;
+padding:14px 18px;
+border-radius:12px;
+font-weight:900;
 background:linear-gradient(90deg,var(--acc1),var(--acc2));
-color:var(--ctaTxt);border:none;
+color:var(--ctaTxt);
+border:none;
 box-shadow:0 8px 18px rgba(0,0,0,.25);
 }
-.cta.secondary{
-background:transparent;color:#d7e6ff;border:1px solid #2a3b55;
-padding:12px 17px;
-}
-.meta{margin-top:12px;font-size:12px;color:var(--muted)}
+.meta{margin-top:14px;font-size:12px;color:var(--muted)}
 
-/* HERO CARD */
+/* CARD MOCKUP */
 .mock{
-background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;
-min-height:220px;box-shadow:0 12px 32px rgba(0,0,0,.35);
+background:var(--card);
+border:1px solid var(--line);
+border-radius:14px;
+padding:16px;
+min-height:240px;
+box-shadow:0 12px 32px rgba(0,0,0,.35);
 }
-.pill-row{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;margin-bottom:10px}
-.pill{
-padding:3px 8px;border-radius:999px;
-border:1px solid #2a3b55;background:#0d1320;color:#cfe2ff;
+.bars{height:160px;display:flex;gap:10px;align-items:flex-end}
+.bars div{flex:1;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#1b2a3f,#0f1724)}
+.bars div:nth-child(1){height:50%}
+.bars div:nth-child(2){height:80%;background:linear-gradient(180deg,#0f3b3b,#0a1822)}
+.bars div:nth-child(3){height:40%}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.kpi{
+background:#0f1622;
+border:1px solid #1f2d42;
+padding:10px;
+border-radius:10px;
+text-align:center;
 }
-.hero-copy-small{font-size:13px;color:var(--muted);margin-top:8px}
+.kpi b{display:block;font-size:18px}
 
-/* SECTIONS */
-section{padding:26px 0}
+/* CARDS */
+section{padding:30px 0}
 .grid3{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
 @media(max-width:900px){.grid3{grid-template-columns:1fr}}
 .card{
-background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;
+background:var(--card);
+border:1px solid var(--line);
+border-radius:14px;
+padding:16px;
 box-shadow:0 10px 26px rgba(0,0,0,.28);
 }
 h2{margin:0 0 12px 0;font-size:22px}
 h3{margin:0 0 6px 0;font-size:16px}
 p{margin:0;color:var(--muted);line-height:1.5}
-ul{margin:8px 0 0 20px;padding:0;color:var(--muted);font-size:14px}
-li{margin:4px 0}
-
-/* TIER GRID */
-.tier-grid{
-display:grid;
-gap:16px;
-grid-template-columns:repeat(3,1fr);
-margin-top:10px;
-}
-@media(max-width:900px){
-.tier-grid{grid-template-columns:1fr}
-}
-.tier{
-background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;
-text-align:left;
-}
-.tier-label{
-font-size:12px;text-transform:uppercase;letter-spacing:.12em;
-color:var(--muted);margin-bottom:6px;
-}
-.tier-name{font-size:18px;font-weight:800;margin-bottom:4px}
-.tier-amt{font-size:16px;font-weight:600;margin-bottom:8px}
-.tier-btn{
-display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;
-background:linear-gradient(90deg,var(--acc1),var(--acc2));
-color:var(--ctaTxt);font-weight:800;border:none;
-text-decoration:none;font-size:14px;
-}
-.tier-notes{font-size:12px;color:var(--muted);margin-top:8px}
-
-/* CENTERED SECTION */
-.center{text-align:center}
 
 /* FOOTER */
 footer{
@@ -149,25 +130,25 @@ color:var(--muted);
 font-size:13px;
 text-align:center;
 padding:20px;
-margin-top:36px;
+margin-top:40px;
 }
 footer a{color:#9fc1ff;text-decoration:underline}
 </style>
 </head>
+
 <body>
 <header>
 <div class="wrap nav">
-<a href="https://hoops.money" class="brand" aria-label="Go to Hoops Money">
+<div class="brand">
 <img src="/images/hooporia-logo.png" alt="Hooporia Institute Inc. Logo" class="logo" />
 <div>
-<div class="title">Hoops Money</div>
+<div class="title">Hoops Cash</div>
 <div class="badge">
 <span class="lang-en">by Hooporia Institute Inc.</span>
 <span class="lang-es">por Hooporia Institute Inc.</span>
 </div>
 </div>
-</a>
-
+</div>
 <div class="lang-toggle" role="group" aria-label="Language">
 <button id="btn-en" class="active" aria-pressed="true">EN</button>
 <button id="btn-es" aria-pressed="false">ES-PR</button>
@@ -176,294 +157,183 @@ footer a{color:#9fc1ff;text-decoration:underline}
 </header>
 
 <main class="wrap">
-<!-- HERO -->
 <section class="hero">
 <div class="h-grid">
 <div class="h-lead">
 <h1>
-<span class="lang-en">Support youth basketball with clear, mission-driven sponsorship.</span>
-<span class="lang-es">Apoya el baloncesto juvenil con auspicios claros y con propósito.</span>
+<span class="lang-en">Powering youth basketball through sponsorship.</span>
+<span class="lang-es">Impulsando el baloncesto juvenil a través del auspicio.</span>
 </h1>
 <p>
 <span class="lang-en">
-Hoops Money helps leagues and teams organize their finances so coaches can focus on players.
-Your sponsorship keeps access free or low-cost for community programs across Puerto Rico and beyond.
+Hoops Cash connects businesses and brands with youth basketball programs,
+helping fund access to Hoops Money and front-office tools across Puerto Rico and beyond.
 </span>
 <span class="lang-es">
-Hoops Money ayuda a ligas y equipos a organizar sus finanzas para que los coaches se enfoquen en los jugadores.
-Tu auspicio mantiene el acceso libre o de bajo costo para programas comunitarios en Puerto Rico y más allá.
+Hoops Cash conecta empresas y marcas con programas de baloncesto juvenil,
+ayudando a financiar acceso a Hoops Money y herramientas administrativas en Puerto Rico y más allá.
 </span>
 </p>
-
 <div class="cta-row">
-<a class="cta" href="mailto:FiatPalante@gmail.com?subject=Hoops%20Money%20Sponsorship">
-<span class="lang-en">Talk with us about sponsorship</span>
-<span class="lang-es">Conversa con nosotros sobre auspicio</span>
-</a>
-<a class="cta secondary" href="mailto:FiatPalante@gmail.com?subject=In-Kind%20Support%20-%20Hoops%20Money">
-<span class="lang-en">Offer in-kind support</span>
-<span class="lang-es">Ofrecer apoyo en especie</span>
+<a class="cta" href="mailto:FiatPalante@gmail.com?subject=Hoops%20Cash%20Sponsorship">
+<span class="lang-en">Talk to Us About Sponsorship</span>
+<span class="lang-es">Conversa con Nosotros sobre Auspicio</span>
 </a>
 </div>
-
 <div class="meta">
 <span class="lang-en">
-Operated by Hooporia Institute Inc. • 508(c) nonprofit • EIN 66-1104700 • UEI T411JSGE5L65
+Marketing partnerships • Community impact • Support seats for leagues & programs
 </span>
 <span class="lang-es">
-Operado por Hooporia Institute Inc. • Organización sin fines de lucro 508(c) • EIN 66-1104700 • UEI T411JSGE5L65
+Alianzas de mercadeo • Impacto comunitario • Apoya asientos para ligas y programas
 </span>
 </div>
 </div>
 
-<aside class="mock" aria-label="Sponsorship impact overview">
-<div class="pill-row">
-<div class="pill">
-<span class="lang-en">Free access seats for programs</span>
-<span class="lang-es">Asientos de acceso gratis para programas</span>
+<div class="mock" aria-label="Preview card">
+<div class="bars"><div></div><div></div><div></div></div>
+<div class="kpis">
+<div class="kpi">
+<span class="lang-en">Programs Supported</span>
+<span class="lang-es">Programas Apoyados</span>
+<b>15+</b>
 </div>
-<div class="pill">
-<span class="lang-en">Youth & community focused</span>
-<span class="lang-es">Enfoque juvenil y comunitario</span>
+<div class="kpi">
+<span class="lang-en">Youth Reached</span>
+<span class="lang-es">Jóvenes Impactados</span>
+<b>1,500+</b>
 </div>
-<div class="pill">
-<span class="lang-en">Transparent use of funds</span>
-<span class="lang-es">Uso transparente de fondos</span>
+<div class="kpi">
+<span class="lang-en">Seasons Funded</span>
+<span class="lang-es">Temporadas Apoyadas</span>
+<b>Multiple</b>
 </div>
 </div>
-<p class="hero-copy-small">
-<span class="lang-en">
-Cash sponsorships and in-kind support (equipment, uniforms, transportation, food)
-help us strengthen programs that often operate with limited resources.
-</span>
-<span class="lang-es">
-Auspicios en efectivo y apoyo en especie (equipos, uniformes, transportación, alimentos)
-nos ayudan a fortalecer programas que muchas veces operan con recursos limitados.
-</span>
-</p>
-</aside>
+</div>
 </div>
 </section>
 
-<!-- HOW SPONSORSHIP WORKS -->
-<section>
+<section id="learn-more">
 <div class="grid3">
 <div class="card">
 <h3>
-<span class="lang-en">Cash sponsorship tiers</span>
-<span class="lang-es">Niveles de auspicio en efectivo</span>
+<span class="lang-en">Sponsor with Purpose</span>
+<span class="lang-es">Auspicia con Propósito</span>
 </h3>
 <p>
 <span class="lang-en">
-Bronze, Silver, and Gold tiers help underwrite Hoops Money access for youth programs.
-You receive recognition as a founding sponsor of the platform.
+Your support helps programs organize finances, plan seasons, and tell a clearer story to parents and partners.
 </span>
 <span class="lang-es">
-Los niveles Bronze, Silver y Gold ayudan a subvencionar el acceso a Hoops Money para programas juveniles.
-Recibes reconocimiento como auspiciador fundador de la plataforma.
+Tu apoyo ayuda a los programas a organizar sus finanzas, planificar temporadas y contar mejor su historia a padres y aliados.
 </span>
 </p>
 </div>
+
 <div class="card">
 <h3>
-<span class="lang-en">In-kind support</span>
-<span class="lang-es">Apoyo en especie</span>
+<span class="lang-en">Brand Visibility</span>
+<span class="lang-es">Visibilidad de Marca</span>
 </h3>
 <p>
 <span class="lang-en">
-Equipment, uniforms, transportation, facility upgrades, and meals for teams are all powerful ways to support.
-We match your support with real program needs.
+Sponsors can be recognized on reports, materials, and Hoops Money touchpoints — always community-first.
 </span>
 <span class="lang-es">
-Equipos, uniformes, transportación, mejoras de canchas y alimentos para los equipos son maneras poderosas de apoyar.
-Alineamos tu apoyo con necesidades reales de los programas.
+Los auspiciadores pueden ser reconocidos en informes, materiales y puntos de contacto de Hoops Money — siempre con enfoque comunitario.
 </span>
 </p>
 </div>
+
 <div class="card">
 <h3>
-<span class="lang-en">Impact and transparency</span>
-<span class="lang-es">Impacto y transparencia</span>
+<span class="lang-en">Flexible Support</span>
+<span class="lang-es">Apoyo Flexible</span>
 </h3>
 <p>
 <span class="lang-en">
-We prioritize community, nonprofit, and volunteer-led programs and share high-level
-impact notes so you can see how your support is helping youth basketball grow.
+Cash, equipment, uniforms, travel, or services — we work with you to match real needs in real programs.
 </span>
 <span class="lang-es">
-Priorizamos programas comunitarios, sin fines de lucro y liderados por voluntarios y compartimos
-notas de impacto a alto nivel para que veas cómo tu apoyo impulsa el baloncesto juvenil.
+Efectivo, equipo, uniformes, viajes o servicios — trabajamos contigo para atender necesidades reales en programas reales.
 </span>
 </p>
 </div>
 </div>
 </section>
 
-<!-- TIERS -->
 <section>
+<div class="grid3">
+<div class="card">
 <h2>
-<span class="lang-en">Sponsorship Levels</span>
-<span class="lang-es">Niveles de Auspicio</span>
+<span class="lang-en">How Hoops Cash Works</span>
+<span class="lang-es">Cómo Funciona Hoops Cash</span>
 </h2>
 <p>
 <span class="lang-en">
-Choose the tier that fits your organization. Every contribution helps us provide structured,
-transparent tools to more youth basketball programs.
+We structure sponsorships as marketing partnerships and route support into seats and tools that leagues and teams can use immediately.
 </span>
 <span class="lang-es">
-Escoge el nivel que mejor se ajuste a tu organización. Cada aportación nos ayuda a llevar
-herramientas claras y transparentes a más programas de baloncesto juvenil.
+Estructuramos el auspicio como alianzas de mercadeo y canalizamos tu apoyo a asientos y herramientas que ligas y equipos pueden usar de inmediato.
 </span>
 </p>
-
-<div class="tier-grid">
-<!-- BRONZE -->
-<div class="tier">
-<div class="tier-label">
-<span class="lang-en">Entry Tier</span>
-<span class="lang-es">Nivel Inicial</span>
-</div>
-<div class="tier-name">BRONZE</div>
-<div class="tier-amt">
-<span class="lang-en">US$600 sponsorship</span>
-<span class="lang-es">Auspicio de US$600</span>
-</div>
-<ul>
-<li>
-<span class="lang-en">Helps fund Hoops Money access for at least one program.</span>
-<span class="lang-es">Ayuda a financiar acceso a Hoops Money para por lo menos un programa.</span>
-</li>
-<li>
-<span class="lang-en">Listed as Bronze Sponsor on our sponsor materials.</span>
-<span class="lang-es">Mención como Auspiciador Bronze en nuestro material de auspicios.</span>
-</li>
-</ul>
-<a class="tier-btn" href="https://buy.stripe.com/bJecN6f5E9CE77QfFla7C03" target="_blank" rel="noopener">
-<span class="lang-en">Become a Bronze Sponsor</span>
-<span class="lang-es">Ser Auspiciador Bronze</span>
-</a>
-<div class="tier-notes">
-<span class="lang-en">Processed securely via Stripe. Receipt issued automatically.</span>
-<span class="lang-es">Procesado de forma segura por Stripe. Recibo se emite automáticamente.</span>
-</div>
 </div>
 
-<!-- SILVER -->
-<div class="tier">
-<div class="tier-label">
-<span class="lang-en">Growth Tier</span>
-<span class="lang-es">Nivel de Crecimiento</span>
-</div>
-<div class="tier-name">SILVER</div>
-<div class="tier-amt">
-<span class="lang-en">US$1,200 sponsorship</span>
-<span class="lang-es">Auspicio de US$1,200</span>
-</div>
-<ul>
-<li>
-<span class="lang-en">Supports multiple program access seats and outreach.</span>
-<span class="lang-es">Apoya múltiples accesos de programas y esfuerzo de alcance comunitario.</span>
-</li>
-<li>
-<span class="lang-en">Silver-level recognition in sponsor materials.</span>
-<span class="lang-es">Reconocimiento a nivel Silver en nuestro material de auspicio.</span>
-</li>
-</ul>
-<a class="tier-btn" href="https://buy.stripe.com/00w8wQg9I024gIqgJpa7C04" target="_blank" rel="noopener">
-<span class="lang-en">Become a Silver Sponsor</span>
-<span class="lang-es">Ser Auspiciador Silver</span>
-</a>
-<div class="tier-notes">
-<span class="lang-en">Ideal for companies wanting a deeper, ongoing impact.</span>
-<span class="lang-es">Ideal para empresas que buscan un impacto más profundo y continuo.</span>
-</div>
+<div class="card">
+<h2>
+<span class="lang-en">Community First</span>
+<span class="lang-es">Comunidad Primero</span>
+</h2>
+<p>
+<span class="lang-en">
+We prioritize community, nonprofit, and volunteer-led programs — especially those serving high-need youth.
+</span>
+<span class="lang-es">
+Priorizamos programas comunitarios, sin fines de lucro y dirigidos por voluntarios — especialmente los que sirven a jóvenes de alto riesgo.
+</span>
+</p>
 </div>
 
-<!-- GOLD -->
-<div class="tier">
-<div class="tier-label">
-<span class="lang-en">Anchor Tier</span>
-<span class="lang-es">Nivel Ancla</span>
-</div>
-<div class="tier-name">GOLD</div>
-<div class="tier-amt">
-<span class="lang-en">US$3,000 sponsorship</span>
-<span class="lang-es">Auspicio de US$3,000</span>
-</div>
-<ul>
-<li>
-<span class="lang-en">Helps sustain free or low-cost access for multiple youth programs.</span>
-<span class="lang-es">Ayuda a mantener acceso gratuito o de bajo costo para múltiples programas juveniles.</span>
-</li>
-<li>
-<span class="lang-en">Highlighted as Gold Sponsor in our sponsor communications.</span>
-<span class="lang-es">Destacado como Auspiciador Gold en nuestras comunicaciones de auspicio.</span>
-</li>
-</ul>
-<a class="tier-btn" href="https://buy.stripe.com/eVqbJ2f5E7uw0Js0Kra7C05" target="_blank" rel="noopener">
-<span class="lang-en">Become a Gold Sponsor</span>
-<span class="lang-es">Ser Auspiciador Gold</span>
-</a>
-<div class="tier-notes">
-<span class="lang-en">We’ll follow up directly to align impact and recognition with your goals.</span>
-<span class="lang-es">Luego coordinamos directamente para alinear impacto y reconocimiento con tus metas.</span>
-</div>
+<div class="card">
+<h2>Hooporia Institute Inc.</h2>
+<p>
+<span class="lang-en">
+A nonprofit organization building simple, resilient tools and partnerships for youth basketball in Puerto Rico and beyond.
+</span>
+<span class="lang-es">
+Una organización sin fines de lucro que construye herramientas y alianzas simples y resilientes para el baloncesto juvenil en Puerto Rico y más allá.
+</span>
+</p>
 </div>
 </div>
 </section>
 
-<!-- IN-KIND / CUSTOM -->
-<section class="center">
-<div class="card" style="max-width:760px;margin:0 auto;">
-<h2>
-<span class="lang-en">Equipment, uniforms, transportation & more</span>
-<span class="lang-es">Equipos, uniformes, transportación y más</span>
-</h2>
-<p>
-<span class="lang-en">
-Not all support needs to be cash. We gladly work with partners providing backboards, rims, balls,
-uniforms, court repairs, team meals, and transportation. These commitments are matched to real needs in
-local programs.
-</span>
-<span class="lang-es">
-No todo apoyo tiene que ser en efectivo. Trabajamos con aliados que proveen tablilleros, aros, balones,
-uniformes, reparación de canchas, comidas para equipos y transportación. Estos compromisos se alinean con
-necesidades reales en programas locales.
-</span>
-</p>
-<p style="margin-top:10px;">
-<span class="lang-en">
-If you’re interested in in-kind support or a custom sponsorship, email us and we’ll start the conversation.
-</span>
-<span class="lang-es">
-Si te interesa ayudar en especie o con un auspicio a la medida, escríbenos y comenzamos la conversación.
-</span>
-</p>
-<p style="margin-top:10px;">
-📧 <a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a>
-</p>
+<section class="center" style="text-align:center;">
+<a class="cta" href="mailto:FiatPalante@gmail.com?subject=Hoops%20Cash%20Sponsorship">
+<span class="lang-en">Start a Sponsorship Conversation</span>
+<span class="lang-es">Comienza una Conversación de Auspicio</span>
+</a>
+<div class="meta" style="margin-top:10px">
+<span class="lang-en">Media, partnerships, or custom support?</span>
+<span class="lang-es">¿Medios, alianzas o apoyo a la medida?</span>
+<a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a>
 </div>
 </section>
 </main>
 
-<footer>
+<footer class="footer">
 © <script>document.write(new Date().getFullYear());</script> Hooporia Institute Inc. — All Rights Reserved.<br>
 EIN: 66-1104700 • UEI: T411JSGE5L65<br>
-<span class="lang-en">
-Hoops Money is a project operated by Hooporia Institute Inc., a nonprofit organization dedicated to advancing youth basketball transparency and development.
-</span>
-<span class="lang-es">
-Hoops Money es un proyecto operado por Hooporia Institute Inc., una organización sin fines de lucro dedicada a la transparencia y desarrollo del baloncesto juvenil.
-</span>
-<br>
-<a href="https://hoops.money/privacy.html">Privacy Policy</a> •
-<a href="https://hoops.money/terms.html">Terms of Use</a> •
+Hoops Cash is a project operated by Hooporia Institute Inc., a nonprofit organization dedicated to advancing youth basketball transparency and development.<br>
+<a href="/privacy.html">Privacy Policy</a> •
+<a href="/terms.html">Terms of Use</a> •
+<a href="/sponsorship-terms.html">Sponsorship Terms</a> •
 <a href="mailto:FiatPalante@gmail.com">Contact Us</a>
 </footer>
 
 <script>
 (function(){
-const key='lang_hoops_cash';
+const key='lang_index';
 const root=document.documentElement;
 const btnEn=document.getElementById('btn-en');
 const btnEs=document.getElementById('btn-es');
@@ -477,7 +347,10 @@ btnEs.setAttribute('aria-pressed', lang==='es');
 try{localStorage.setItem(key,lang);}catch(_){}
 }
 
-const saved=(()=>{try{return localStorage.getItem(key)}catch(_){return null}})();
+const saved=(()=>{
+try{return localStorage.getItem(key)}catch(_){return null}
+})();
+
 setLang(saved==='es'?'es':'en');
 
 btnEn.addEventListener('click',()=>setLang('en'));
